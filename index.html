@@ -1152,7 +1152,20 @@ function selectType(val,label){
   renderTypeList();
 }
 function applyFilters(){renderPosts(true);}
-function doSearch(){filterState.search=document.getElementById('searchInput').value.trim().toLowerCase();renderPosts(true);}
+function doSearch(){
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  filterState.search = q;
+
+  // Jump directly to profile if exact username typed (@user or user)
+  const exact = q.replace(/^@/, '');
+  if (DB.users[exact]) {
+    viewUserProfile(exact);
+    return;
+  }
+
+  renderPosts(true);
+}
+
 function clearFilters(){
   filterState={type:'',ortsteil:'',price:'',share:'',search:''};
   document.getElementById('flbl-area').textContent='Areas';
