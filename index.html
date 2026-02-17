@@ -40,7 +40,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px;}
 
-/* ═══ TOP NAV ═══ */
+/* â•â•â• TOP NAV â•â•â• */
 .topnav{
   position:sticky;top:0;z-index:900;
   background:rgba(248,246,241,0.95);
@@ -130,7 +130,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
   flex-shrink:0;
 }
 
-/* ═══ BOTTOM NAV ═══ */
+/* â•â•â• BOTTOM NAV â•â•â• */
 .bottomnav{
   position:fixed;bottom:0;left:0;right:0;z-index:900;
   height:var(--bottom-h);
@@ -174,7 +174,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 }
 .bnav-item.active .bnav-pip{ transform:scaleX(1); }
 
-/* ─── Centre POST button ─── */
+/* â”€â”€â”€ Centre POST button â”€â”€â”€ */
 .bnav-post-wrap{
   flex:0 0 auto;
   display:flex;flex-direction:column;
@@ -220,11 +220,11 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
   margin-top:0.35rem;opacity:.7;
 }
 
-/* ═══ PAGES ═══ */
+/* â•â•â• PAGES â•â•â• */
 .page{display:none;min-height:calc(100vh - var(--nav-h) - var(--bottom-h));}
 .page.active{display:block;}
 
-/* ═══ HERO ═══ */
+/* â•â•â• HERO â•â•â• */
 .hero{
   background:linear-gradient(135deg, var(--primary) 0%, var(--primary-mid) 60%, #3A8B6A 100%);
   padding:2.5rem 1.25rem 3rem;
@@ -271,7 +271,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 .hero-stat strong{display:block;font-size:1.3rem;color:#fff;}
 .hero-stat span{font-size:0.75rem;opacity:.7;}
 
-/* ═══ SECTION ═══ */
+/* â•â•â• SECTION â•â•â• */
 .section{padding:1.5rem 1.25rem;}
 .section-head{
   display:flex;align-items:center;justify-content:space-between;
@@ -280,7 +280,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 .section-head h2{font-size:1.3rem;color:var(--primary);}
 .see-all{font-size:0.85rem;color:var(--primary-mid);font-weight:600;cursor:pointer;}
 
-/* ═══ FILTERS ═══ */
+/* â•â•â• FILTERS â•â•â• */
 .filter-scroll{
   display:flex;gap:0.5rem;
   overflow-x:auto;padding:0.25rem 0.1rem 0.75rem;
@@ -311,7 +311,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
   padding-right:24px;cursor:pointer;
 }
 
-/* ═══ POST CARD ═══ */
+/* â•â•â• POST CARD â•â•â• */
 .posts-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));
@@ -489,7 +489,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
   margin-top:0.1rem;font-size:0.78rem;color:var(--text-light);
 }
 
-/* ═══ PROFILE PAGE ═══ */
+/* â•â•â• PROFILE PAGE â•â•â• */
 .profile-hero{
   background:linear-gradient(135deg,var(--primary),var(--primary-mid));
   padding:2rem 1.25rem 1rem;
@@ -536,6 +536,14 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
   font-weight:600;font-size:0.88rem;transition:all .2s;
 }
 .btn-edit-profile:hover{background:rgba(255,255,255,0.25);}
+.btn-admin-portal{
+  padding:0.55rem 1.2rem;border-radius:20px;
+  background:rgba(193,18,31,0.18);color:#fff;
+  border:1.5px solid rgba(193,18,31,0.6);
+  font-weight:700;font-size:0.88rem;
+  transition:all .2s;letter-spacing:.3px;
+}
+.btn-admin-portal:hover{background:var(--danger);border-color:var(--danger);}
 .profile-tabs{
   display:flex;border-bottom:1px solid var(--border);
   background:var(--card);
@@ -565,7 +573,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 }
 .personal-photos-upload-area:hover{border-color:var(--primary);background:rgba(27,67,50,0.03);}
 
-/* ═══ MESSAGES PAGE ═══ */
+/* â•â•â• MESSAGES PAGE â•â•â• */
 .msgs-header{
   display:flex;align-items:center;justify-content:space-between;
   padding:1rem 1.25rem;border-bottom:1px solid var(--border);
@@ -698,7 +706,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 }
 .chat-send:hover{background:var(--primary-mid);transform:scale(1.05);}
 
-/* ═══ MODALS ═══ */
+/* â•â•â• MODALS â•â•â• */
 .modal{
   display:none;position:fixed;
   top:0;left:0;right:0;bottom:0;
@@ -827,7 +835,59 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 .photo-upload-circle img{width:100%;height:100%;object-fit:cover;}
 
 /* Admin Panel */
-.admin-panel{background:var(--card);border-radius:16px;padding:1.5rem;margin-bottom:1rem;border:2px solid rgba(193,18,31,0.2);}
+.admin-topbar{
+  background:linear-gradient(135deg,#1a0a0a,#3d0f0f);
+  padding:1rem 1.25rem;
+  display:flex;align-items:center;gap:0.75rem;
+  position:sticky;top:var(--nav-h);z-index:100;
+}
+.admin-back-btn{
+  padding:0.4rem 0.9rem;border-radius:20px;
+  background:rgba(255,255,255,0.12);color:#fff;
+  font-size:0.82rem;font-weight:600;
+  border:1px solid rgba(255,255,255,0.2);
+  transition:all .2s;flex-shrink:0;
+}
+.admin-back-btn:hover{background:rgba(255,255,255,0.22);}
+.admin-title{
+  font-weight:700;color:#fff;font-size:1rem;flex:1;text-align:center;
+}
+.admin-badge-lbl{
+  font-size:0.7rem;color:rgba(255,100,100,0.85);
+  border:1px solid rgba(255,100,100,0.4);
+  padding:0.2rem 0.6rem;border-radius:10px;
+  font-weight:600;letter-spacing:.5px;flex-shrink:0;
+}
+.admin-section-head{
+  border-bottom:2px solid rgba(193,18,31,0.15);
+  padding-bottom:0.5rem;margin-bottom:0.75rem;
+}
+.admin-section-head h3{color:var(--danger);font-size:1rem;}
+.admin-user-card{
+  background:var(--bg);border-radius:12px;
+  padding:0.85rem 1rem;margin-bottom:0.5rem;
+  display:flex;align-items:center;gap:0.75rem;
+  border:1px solid var(--border);
+}
+.auc-ava{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--primary-mid);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:0.95rem;overflow:hidden;flex-shrink:0;
+}
+.auc-ava img{width:100%;height:100%;object-fit:cover;}
+.auc-info{flex:1;min-width:0;}
+.auc-name{font-weight:700;font-size:0.88rem;}
+.auc-meta{font-size:0.75rem;color:var(--text-light);}
+.auc-actions{display:flex;gap:0.35rem;flex-shrink:0;}
+.admin-post-card{
+  background:var(--bg);border-radius:12px;
+  padding:0.85rem 1rem;margin-bottom:0.5rem;
+  border:1px solid var(--border);
+}
+.apc-title{font-weight:700;font-size:0.88rem;color:var(--primary);margin-bottom:0.25rem;}
+.apc-meta{font-size:0.78rem;color:var(--text-light);margin-bottom:0.5rem;}
+.apc-actions{display:flex;gap:0.35rem;flex-wrap:wrap;}
 .admin-panel h2{color:var(--danger);}
 .admin-stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;margin:1rem 0;}
 .astat-card{background:var(--bg);border-radius:12px;padding:1rem;text-align:center;}
@@ -928,7 +988,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 }
 @keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
 
-/* ═══ RESPONSIVE ═══ */
+/* â•â•â• RESPONSIVE â•â•â• */
 @media(max-width:767px){
   body{padding-bottom:calc(var(--bottom-h) + env(safe-area-inset-bottom));}
   .topnav{padding:0 0.9rem;gap:0.5rem;}
@@ -987,50 +1047,46 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <nav class="topnav" id="topnav">
   <div class="logo" onclick="showPage('home')">Berlin<span>Nest</span></div>
   <div class="topnav-right">
-    <button class="lang-toggle" id="langToggleBtn" onclick="toggleLang()">🇬🇧 EN</button>
+    <button class="lang-toggle" id="langToggleBtn" onclick="toggleLang()">ðŸ‡¬ðŸ‡§ EN</button>
     <button class="btn-msgs-icon" onclick="showPage('messages')" title="Messages">
-      💬<span class="msgs-unread-dot" id="msgsUnreadDot"></span>
+      ðŸ’¬<span class="msgs-unread-dot" id="msgsUnreadDot"></span>
     </button>
     <button class="btn-sign hidden" id="signinBtn" onclick="openModal('loginModal')"></button>
     <button class="btn-post" id="postBtn" onclick="handlePostClick()">
-      <span>＋</span><span data-key="post_btn">Post</span>
+      <span>ï¼‹</span><span data-key="post_btn">Post</span>
     </button>
-    <div class="topnav-avatar-wrap hidden" id="avatarWrap">
-      <div class="topnav-avatar" id="topnavAvatar" onclick="showPage('profile')"></div>
-      <div class="notif-dot hidden" id="adminNotifDot"></div>
-    </div>
   </div>
 </nav>
 
-<!-- BOTTOM NAV: Home · Post · Profile -->
+<!-- BOTTOM NAV: Home Â· Post Â· Profile -->
 <nav class="bottomnav" id="bottomnav">
   <button class="bnav-item active" id="bn-home" onclick="showPage('home')">
-    <span class="bnav-icon">🏠</span>
+    <span class="bnav-icon">ðŸ </span>
     <span class="bnav-label" data-key="nav_home">Home</span>
     <span class="bnav-pip"></span>
   </button>
 
   <div class="bnav-post-wrap" id="bn-post">
     <button class="bnav-post-btn" onclick="handlePostClick()" aria-label="Post listing">
-      <span class="bnav-post-icon">＋</span>
+      <span class="bnav-post-icon">ï¼‹</span>
     </button>
     <span class="bnav-post-label" data-key="nav_post">Post</span>
   </div>
 
   <button class="bnav-item" id="bn-profile" onclick="showPage('profile')">
-    <span class="bnav-icon">👤</span>
+    <span class="bnav-icon">ðŸ‘¤</span>
     <span class="bnav-label" data-key="nav_profile">Profile</span>
     <span class="bnav-pip"></span>
   </button>
 </nav>
 
-<!-- ════════ HOME PAGE ════════ -->
+<!-- â•â•â•â•â•â•â•â• HOME PAGE â•â•â•â•â•â•â•â• -->
 <div class="page active" id="page-home">
   <div class="hero">
     <h1 data-key="hero_title">Find Your Perfect Home in Berlin</h1>
     <p data-key="hero_sub">Discover verified apartments across all neighborhoods</p>
     <div class="search-wrap">
-      <span>🔍</span>
+      <span>ðŸ”</span>
       <input type="text" id="searchInput" placeholder="Search neighborhood, type..." data-key-ph="search_ph">
       <button class="search-btn" onclick="doSearch()" data-key="search">Search</button>
     </div>
@@ -1041,22 +1097,22 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
       <select class="fsel" id="f-ortsteil" onchange="applyFilters()">
         <option value="">Areas</option>
         <option>Kreuzberg</option><option>Prenzlauer Berg</option>
-        <option>Friedrichshain</option><option>Neukölln</option>
+        <option>Friedrichshain</option><option>NeukÃ¶lln</option>
         <option>Charlottenburg</option><option>Mitte</option>
         <option>Wedding</option><option>Moabit</option>
-        <option>Schöneberg</option><option>Wilmersdorf</option>
+        <option>SchÃ¶neberg</option><option>Wilmersdorf</option>
         <option>Tempelhof</option><option>Steglitz</option>
         <option>Pankow</option><option>Lichtenberg</option>
-        <option>Treptow</option><option>Köpenick</option>
+        <option>Treptow</option><option>KÃ¶penick</option>
         <option>Spandau</option><option>Reinickendorf</option>
       </select>
       <select class="fsel" id="f-price" onchange="applyFilters()">
         <option value="">Price</option>
-        <option value="0-500">Under €500</option>
-        <option value="500-800">€500–€800</option>
-        <option value="800-1200">€800–€1,200</option>
-        <option value="1200-2000">€1,200–€2,000</option>
-        <option value="2000-9999">€2,000+</option>
+        <option value="0-500">Under â‚¬500</option>
+        <option value="500-800">â‚¬500â€“â‚¬800</option>
+        <option value="800-1200">â‚¬800â€“â‚¬1,200</option>
+        <option value="1200-2000">â‚¬1,200â€“â‚¬2,000</option>
+        <option value="2000-9999">â‚¬2,000+</option>
       </select>
       <select class="fsel" id="f-type" onchange="applyFilters()">
         <option value="">Type</option>
@@ -1076,7 +1132,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
   </div>
 </div>
 
-<!-- ════════ MESSAGES PAGE ════════ -->
+<!-- â•â•â•â•â•â•â•â• MESSAGES PAGE â•â•â•â•â•â•â•â• -->
 <div class="page" id="page-messages">
   <div class="msgs-layout" id="msgsLayout">
     <div class="msgs-sidebar" id="msgsSidebar">
@@ -1085,37 +1141,58 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
           <button class="msgs-tab active" id="tab-dms" onclick="switchMsgsTab('dms')" data-key="tab_dms">Direct</button>
           <button class="msgs-tab" id="tab-groups" onclick="switchMsgsTab('groups')" data-key="tab_groups">Groups</button>
         </div>
-        <button class="btn-new-group" onclick="openModal('newGroupModal')">＋ <span data-key="new_group">Group</span></button>
+        <button class="btn-new-group" onclick="openModal('newGroupModal')">ï¼‹ <span data-key="new_group">Group</span></button>
       </div>
       <div class="conv-list" id="convList"></div>
     </div>
     <div id="chatArea" style="display:flex;align-items:center;justify-content:center;background:var(--bg);min-height:400px;">
       <div style="text-align:center;color:var(--text-light);">
-        <div style="font-size:3rem;margin-bottom:1rem;">💬</div>
+        <div style="font-size:3rem;margin-bottom:1rem;">ðŸ’¬</div>
         <p data-key="select_conv">Select a conversation</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ════════ PROFILE PAGE ════════ -->
+<!-- â•â•â•â•â•â•â•â• PROFILE PAGE â•â•â•â•â•â•â•â• -->
 <div class="page" id="page-profile">
   <div id="profileContent"></div>
 </div>
 
-<!-- ════════ ADMIN PAGE ════════ -->
+<!-- â•â•â•â•â•â•â•â• ADMIN PAGE â•â•â•â•â•â•â•â• -->
 <div class="page" id="page-admin">
+  <div class="admin-topbar">
+    <button class="admin-back-btn" onclick="showPage('profile')">â† Back to Profile</button>
+    <span class="admin-title">ðŸ›¡ï¸ Admin Panel</span>
+    <span class="admin-badge-lbl">Vikram only</span>
+  </div>
   <div class="section">
     <div class="admin-panel">
-      <h2>🛡️ Admin Control Panel</h2>
+      <h2>ðŸ›¡ï¸ Control Panel</h2>
       <div class="admin-stats-row">
         <div class="astat-card"><div class="astat-val" id="a-users">0</div><div class="astat-lbl">Total Users</div></div>
         <div class="astat-card"><div class="astat-val" id="a-posts">0</div><div class="astat-lbl">Total Posts</div></div>
         <div class="astat-card"><div class="astat-val" id="a-reports">0</div><div class="astat-lbl">Pending Reports</div></div>
         <div class="astat-card"><div class="astat-val" id="a-banned">0</div><div class="astat-lbl">Banned Users</div></div>
       </div>
-      <h3 style="margin-bottom:1rem;">📋 Reports</h3>
+
+      <!-- ALL USERS LIST -->
+      <div class="admin-section-head">
+        <h3>ðŸ‘¥ All Users</h3>
+      </div>
+      <div id="adminUsersList"></div>
+
+      <!-- REPORTS LIST -->
+      <div class="admin-section-head" style="margin-top:1.5rem;">
+        <h3>ðŸ“‹ Reports</h3>
+      </div>
       <div id="adminReportsList"></div>
+
+      <!-- ALL POSTS LIST -->
+      <div class="admin-section-head" style="margin-top:1.5rem;">
+        <h3>ðŸ  All Posts</h3>
+      </div>
+      <div id="adminPostsList"></div>
     </div>
   </div>
 </div>
@@ -1123,7 +1200,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <!-- CHAT VIEW OVERLAY -->
 <div class="chat-view" id="chatView">
   <div class="chat-header">
-    <button class="chat-back" onclick="closeChat()">←</button>
+    <button class="chat-back" onclick="closeChat()">â†</button>
     <div class="chat-hdr-ava" id="chatHdrAva"></div>
     <div class="chat-hdr-info">
       <div class="chat-hdr-name" id="chatHdrName"></div>
@@ -1132,23 +1209,23 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
   </div>
   <div class="chat-msgs" id="chatMsgs"></div>
   <div class="chat-input-area">
-    <button class="chat-img-btn" onclick="document.getElementById('chatImgUpload').click()" title="Send image">📷</button>
+    <button class="chat-img-btn" onclick="document.getElementById('chatImgUpload').click()" title="Send image">ðŸ“·</button>
     <input type="file" id="chatImgUpload" accept="image/*" style="display:none" onchange="sendChatImage(this)">
     <textarea class="chat-input" id="chatInput" placeholder="Type a message..." rows="1" onkeydown="handleChatKey(event)"></textarea>
-    <button class="chat-send" onclick="sendMessage()">➤</button>
+    <button class="chat-send" onclick="sendMessage()">âž¤</button>
   </div>
 </div>
 
-<!-- ════════ MODALS ════════ -->
+<!-- â•â•â•â•â•â•â•â• MODALS â•â•â•â•â•â•â•â• -->
 
 <!-- LOGIN -->
 <div class="modal" id="loginModal">
   <div class="modal-box">
-    <button class="mclose" onclick="closeModal('loginModal')">×</button>
+    <button class="mclose" onclick="closeModal('loginModal')">Ã—</button>
     <h2 data-key="login_title">Welcome Back</h2>
     <p data-key="login_sub">Sign in to your account</p>
     <button class="btn-google" onclick="handleGoogleAuth('login')">
-      🔵 <span data-key="google_signin">Sign in with Google</span>
+      ðŸ”µ <span data-key="google_signin">Sign in with Google</span>
     </button>
     <div class="divider-or"><span data-key="or">or</span></div>
     <form onsubmit="handleLogin(event)">
@@ -1169,11 +1246,11 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <!-- SIGNUP -->
 <div class="modal" id="signupModal">
   <div class="modal-box">
-    <button class="mclose" onclick="closeModal('signupModal')">×</button>
+    <button class="mclose" onclick="closeModal('signupModal')">Ã—</button>
     <h2 data-key="signup_title">Create Account</h2>
     <p data-key="signup_sub">Join BerlinNest today</p>
     <button class="btn-google" onclick="handleGoogleAuth('signup')">
-      🔵 <span data-key="google_signup">Sign up with Google</span>
+      ðŸ”µ <span data-key="google_signup">Sign up with Google</span>
     </button>
     <div class="divider-or"><span data-key="or">or</span></div>
     <form onsubmit="handleSignup(event)">
@@ -1197,7 +1274,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
         <input type="password" id="signupPass" required>
       </div>
       <div class="form-group">
-        <label data-key="gender_label">Gender <span style="color:var(--text-light);font-weight:400;">(Optional · Private)</span></label>
+        <label data-key="gender_label">Gender <span style="color:var(--text-light);font-weight:400;">(Optional Â· Private)</span></label>
         <select id="signupGender">
           <option value="" data-key="prefer_not">Prefer not to say</option>
           <option value="m" data-key="male">Male</option>
@@ -1206,7 +1283,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
         </select>
       </div>
       <div class="terms-scroll">
-        <h4>📜 Terms & Conditions</h4>
+        <h4>ðŸ“œ Terms & Conditions</h4>
         <p><strong>1. Zero Harassment Policy.</strong> BerlinNest strictly prohibits harassment of any kind. Violations result in immediate account termination.</p>
         <p><strong>2. No Discrimination.</strong> Any form of discrimination based on gender, race, religion, nationality, or sexual orientation is forbidden.</p>
         <p><strong>3. Accurate Listings.</strong> All apartment information must be truthful and current.</p>
@@ -1228,7 +1305,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <!-- NEW POST -->
 <div class="modal" id="postModal">
   <div class="modal-box" style="max-width:640px;">
-    <button class="mclose" onclick="closeModal('postModal')">×</button>
+    <button class="mclose" onclick="closeModal('postModal')">Ã—</button>
     <h2 data-key="post_title">List Your Apartment</h2>
     <p data-key="post_sub">Fill in the details to attract great tenants</p>
     <form onsubmit="handlePost(event)">
@@ -1242,13 +1319,13 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
           <select id="pOrtsteil" required>
             <option value="">Select area...</option>
             <option>Kreuzberg</option><option>Prenzlauer Berg</option>
-            <option>Friedrichshain</option><option>Neukölln</option>
+            <option>Friedrichshain</option><option>NeukÃ¶lln</option>
             <option>Charlottenburg</option><option>Mitte</option>
             <option>Wedding</option><option>Moabit</option>
-            <option>Schöneberg</option><option>Wilmersdorf</option>
+            <option>SchÃ¶neberg</option><option>Wilmersdorf</option>
             <option>Tempelhof</option><option>Steglitz</option>
             <option>Pankow</option><option>Lichtenberg</option>
-            <option>Treptow</option><option>Köpenick</option>
+            <option>Treptow</option><option>KÃ¶penick</option>
             <option>Spandau</option><option>Reinickendorf</option>
           </select>
         </div>
@@ -1271,21 +1348,21 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
           </select>
         </div>
         <div class="form-group">
-          <label data-key="size">Size (m²)</label>
+          <label data-key="size">Size (mÂ²)</label>
           <input type="number" id="pSize" min="5" max="500" required>
         </div>
       </div>
       <div class="form-row3">
         <div class="form-group">
-          <label data-key="kaltmiete">Kaltmiete €</label>
+          <label data-key="kaltmiete">Rent â‚¬</label>
           <input type="number" id="pCold" min="0" required>
         </div>
         <div class="form-group">
-          <label data-key="warmmiete">Warmmiete €</label>
+          <label data-key="warmmiete">Rent with utilities â‚¬</label>
           <input type="number" id="pWarm" min="0" required>
         </div>
         <div class="form-group">
-          <label data-key="kaution">Kaution €</label>
+          <label data-key="kaution">Deposit â‚¬</label>
           <input type="number" id="pDeposit" min="0">
         </div>
       </div>
@@ -1324,7 +1401,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
       <div class="form-group">
         <label data-key="photos">Photos (up to 11)</label>
         <div class="img-upload-zone" onclick="document.getElementById('pImgs').click()">
-          <div class="icon">📸</div>
+          <div class="icon">ðŸ“¸</div>
           <p data-key="upload_photos">Click to upload photos</p>
         </div>
         <input type="file" id="pImgs" multiple accept="image/*" style="display:none" onchange="handlePostImgs(this)">
@@ -1338,7 +1415,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <!-- EDIT POST -->
 <div class="modal" id="editPostModal">
   <div class="modal-box" style="max-width:560px;">
-    <button class="mclose" onclick="closeModal('editPostModal')">×</button>
+    <button class="mclose" onclick="closeModal('editPostModal')">Ã—</button>
     <h2 data-key="edit_post">Edit Post</h2>
     <p data-key="edit_post_sub">Update your listing details</p>
     <form onsubmit="handleEditPost(event)">
@@ -1346,8 +1423,8 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
       <div class="form-group"><label data-key="apt_title">Title</label><input type="text" id="eptTitle" required></div>
       <div class="form-group"><label data-key="description">Description</label><textarea id="eptDesc" rows="3" required></textarea></div>
       <div class="form-row">
-        <div class="form-group"><label data-key="warmmiete">Warmmiete €</label><input type="number" id="eptWarm" required></div>
-        <div class="form-group"><label data-key="kaution">Kaution €</label><input type="number" id="eptDeposit"></div>
+        <div class="form-group"><label data-key="warmmiete">Rent with utilities â‚¬</label><input type="number" id="eptWarm" required></div>
+        <div class="form-group"><label data-key="kaution">Deposit â‚¬</label><input type="number" id="eptDeposit"></div>
       </div>
       <button type="submit" class="btn-full" data-key="save_changes">Save Changes</button>
     </form>
@@ -1357,12 +1434,12 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <!-- EDIT PROFILE -->
 <div class="modal" id="editProfileModal">
   <div class="modal-box" style="max-width:500px;">
-    <button class="mclose" onclick="closeModal('editProfileModal')">×</button>
+    <button class="mclose" onclick="closeModal('editProfileModal')">Ã—</button>
     <h2 data-key="edit_profile">Edit Profile</h2>
     <p data-key="edit_profile_sub">Customize your BerlinNest profile</p>
     <form onsubmit="handleEditProfile(event)">
       <div style="text-align:center;margin-bottom:1.25rem;">
-        <div class="photo-upload-circle" onclick="document.getElementById('profPhotoInput').click()" id="profPhotoPreview">📷</div>
+        <div class="photo-upload-circle" onclick="document.getElementById('profPhotoInput').click()" id="profPhotoPreview">ðŸ“·</div>
         <input type="file" id="profPhotoInput" accept="image/*" style="display:none" onchange="handleProfPhoto(this)">
         <p style="font-size:0.78rem;color:var(--text-light);" data-key="tap_to_change">Tap to change photo</p>
       </div>
@@ -1378,7 +1455,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
       <div class="form-group">
         <label data-key="personal_photos">Personal Photos</label>
         <div class="img-upload-zone" onclick="document.getElementById('persPhotosInput').click()">
-          <div class="icon">🖼️</div>
+          <div class="icon">ðŸ–¼ï¸</div>
           <p data-key="upload_photos">Upload photos for your gallery</p>
         </div>
         <input type="file" id="persPhotosInput" multiple accept="image/*" style="display:none" onchange="handlePersPhotos(this)">
@@ -1392,7 +1469,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <!-- REPORT -->
 <div class="modal" id="reportModal">
   <div class="modal-box" style="max-width:440px;">
-    <button class="mclose" onclick="closeModal('reportModal')">×</button>
+    <button class="mclose" onclick="closeModal('reportModal')">Ã—</button>
     <h2 data-key="report_title">Submit a Report</h2>
     <p data-key="report_sub">Our team reviews all reports within 24 hours</p>
     <form onsubmit="handleReport(event)">
@@ -1420,7 +1497,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <!-- VIEW USER PROFILE -->
 <div class="modal" id="userProfileModal">
   <div class="modal-box" style="max-width:480px;">
-    <button class="mclose" onclick="closeModal('userProfileModal')">×</button>
+    <button class="mclose" onclick="closeModal('userProfileModal')">Ã—</button>
     <div id="userProfileContent"></div>
   </div>
 </div>
@@ -1428,7 +1505,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <!-- POST DETAIL -->
 <div class="modal" id="postDetailModal">
   <div class="modal-box" style="max-width:640px;">
-    <button class="mclose" onclick="closeModal('postDetailModal')">×</button>
+    <button class="mclose" onclick="closeModal('postDetailModal')">Ã—</button>
     <div id="postDetailContent"></div>
   </div>
 </div>
@@ -1436,7 +1513,7 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <!-- NEW GROUP -->
 <div class="modal" id="newGroupModal">
   <div class="modal-box" style="max-width:440px;">
-    <button class="mclose" onclick="closeModal('newGroupModal')">×</button>
+    <button class="mclose" onclick="closeModal('newGroupModal')">Ã—</button>
     <h2 data-key="create_group">Create Group</h2>
     <p data-key="create_group_sub">Start a group chat for your community</p>
     <form onsubmit="handleCreateGroup(event)">
@@ -1451,9 +1528,9 @@ input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
 <div class="toast" id="toast"></div>
 
 <script>
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // TRANSLATIONS
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 const LANG = {
   en: {
     hero_title:"Find Your Perfect Home in Berlin",hero_sub:"Discover verified apartments across all neighborhoods",
@@ -1474,7 +1551,7 @@ const LANG = {
     have_account:"Already have an account?",sign_in_link:"Sign in",
     post_title:"List Your Apartment",post_sub:"Fill in details to attract great tenants",
     apt_title:"Listing Title",ortsteil:"Ortsteil",apt_type:"Type",apt_share:"Sharing",
-    size:"Size (m²)",kaltmiete:"Kaltmiete €",warmmiete:"Warmmiete €",kaution:"Kaution €",
+    size:"Size (mÂ²)",kaltmiete:"Rent â‚¬",warmmiete:"Rent with utilities â‚¬",kaution:"Deposit â‚¬",
     anmeldung:"Anmeldung",yes:"Yes",no:"No",
     facilities:"Facilities",balcony:"Balcony",elevator:"Elevator",kitchen:"Kitchen",
     dishwasher:"Dishwasher",washer:"Washer",parking:"Parking",garden:"Garden",
@@ -1504,43 +1581,43 @@ const LANG = {
     search:"Suchen",search_ph:"Stadtteil oder Typ suchen...",
     hs_listings:"Inserate",hs_users:"Nutzer",hs_districts:"Stadtteile",
     section_listings:"Aktuelle Inserate",see_all:"Alle anzeigen",all_neighborhoods:"Alle Gebiete",
-    all_prices:"Alle Preise",all_sizes:"Alle Größen",
+    all_prices:"Alle Preise",all_sizes:"Alle GrÃ¶ÃŸen",
     nav_home:"Startseite",nav_post:"Inserieren",nav_msgs:"Nachrichten",nav_profile:"Profil",
     post_btn:"Inserieren",
-    login_title:"Willkommen zurück",login_sub:"Bei Ihrem Konto anmelden",
+    login_title:"Willkommen zurÃ¼ck",login_sub:"Bei Ihrem Konto anmelden",
     google_signin:"Mit Google anmelden",or:"oder",
     email:"E-Mail",password:"Passwort",sign_in:"Anmelden",
     no_account:"Noch kein Konto?",sign_up_link:"Registrieren",
     signup_title:"Konto erstellen",signup_sub:"Treten Sie BerlinNest bei",
-    google_signup:"Mit Google registrieren",username:"Benutzername",fullname:"Vollständiger Name",
-    gender_label:"Geschlecht",prefer_not:"Keine Angabe",male:"Männlich",female:"Weiblich",other:"Andere",
+    google_signup:"Mit Google registrieren",username:"Benutzername",fullname:"VollstÃ¤ndiger Name",
+    gender_label:"Geschlecht",prefer_not:"Keine Angabe",male:"MÃ¤nnlich",female:"Weiblich",other:"Andere",
     accept_terms:"Ich akzeptiere die AGB",create_account:"Konto erstellen",
     have_account:"Bereits ein Konto?",sign_in_link:"Anmelden",
     post_title:"Wohnung inserieren",post_sub:"Details eingeben",
     apt_title:"Inserat-Titel",ortsteil:"Ortsteil",apt_type:"Typ",apt_share:"Art",
-    size:"Größe (m²)",kaltmiete:"Kaltmiete €",warmmiete:"Warmmiete €",kaution:"Kaution €",
+    size:"GrÃ¶ÃŸe (mÂ²)",kaltmiete:"Rent â‚¬",warmmiete:"Rent with utilities â‚¬",kaution:"Deposit â‚¬",
     anmeldung:"Anmeldung",yes:"Ja",no:"Nein",
-    facilities:"Ausstattung",balcony:"Balkon",elevator:"Aufzug",kitchen:"Küche",
-    dishwasher:"Geschirrspüler",washer:"Waschmaschine",parking:"Parkplatz",garden:"Garten",
-    pets:"Haustiere OK",furnished:"Möbliert",cellar:"Keller",
+    facilities:"Ausstattung",balcony:"Balkon",elevator:"Aufzug",kitchen:"KÃ¼che",
+    dishwasher:"GeschirrspÃ¼ler",washer:"Waschmaschine",parking:"Parkplatz",garden:"Garten",
+    pets:"Haustiere OK",furnished:"MÃ¶bliert",cellar:"Keller",
     description:"Beschreibung",photos:"Fotos (bis 11)",upload_photos:"Klicken zum Hochladen",
-    publish:"Inserat veröffentlichen",
+    publish:"Inserat verÃ¶ffentlichen",
     edit_post:"Beitrag bearbeiten",edit_post_sub:"Ihr Inserat aktualisieren",
     edit_profile:"Profil bearbeiten",edit_profile_sub:"Profil anpassen",
-    tap_to_change:"Tippen zum Ändern",bio:"Biografie",personal_photos:"Persönliche Fotos",
-    save_changes:"Änderungen speichern",
-    report_title:"Meldung einreichen",report_sub:"Wird innerhalb 24h geprüft",
-    reason:"Grund",select_reason:"Grund auswählen...",
-    r_harassment:"Belästigung",r_discrimination:"Diskriminierung",r_fake:"Gefälschtes Inserat",
+    tap_to_change:"Tippen zum Ã„ndern",bio:"Biografie",personal_photos:"PersÃ¶nliche Fotos",
+    save_changes:"Ã„nderungen speichern",
+    report_title:"Meldung einreichen",report_sub:"Wird innerhalb 24h geprÃ¼ft",
+    reason:"Grund",select_reason:"Grund auswÃ¤hlen...",
+    r_harassment:"BelÃ¤stigung",r_discrimination:"Diskriminierung",r_fake:"GefÃ¤lschtes Inserat",
     r_spam:"Spam",r_inappropriate:"Unangemessener Inhalt",r_other:"Andere",
     details:"Details",submit_report:"Meldung absenden",
-    tab_dms:"Direkt",tab_groups:"Gruppen",new_group:"Gruppe",select_conv:"Gespräch auswählen",
+    tab_dms:"Direkt",tab_groups:"Gruppen",new_group:"Gruppe",select_conv:"GesprÃ¤ch auswÃ¤hlen",
     create_group:"Gruppe erstellen",create_group_sub:"Community-Chat starten",
     group_name:"Gruppenname",group_desc:"Beschreibung (optional)",create_group_btn:"Gruppe erstellen",
     follow:"Folgen",following:"Gefolgt",edit_profile_btn:"Profil bearbeiten",
     listings_tab:"Inserate",photos_tab:"Fotos",following_tab:"Folge ich",followers_tab:"Follower",
     contact:"Kontakt",details_btn:"Details",report:"Melden",
-    month:"/Monat",warm:"warm",deposit:"Kaution",
+    month:"/Monat",warm:"warm",deposit:"Deposit",
     private:"Privat",shared:"Geteilt",studio:"Studio",
   }
 };
@@ -1552,7 +1629,7 @@ function toggleLang(){
   lang = lang === 'en' ? 'de' : 'en';
   localStorage.setItem('bnLang', lang);
   const btn = document.getElementById('langToggleBtn');
-  btn.textContent = lang === 'en' ? '🇬🇧 EN' : '🇩🇪 DE';
+  btn.textContent = lang === 'en' ? 'ðŸ‡¬ðŸ‡§ EN' : 'ðŸ‡©ðŸ‡ª DE';
   applyLang();
   renderPosts(getAlgoSorted());
   renderConversations();
@@ -1563,7 +1640,7 @@ function setLang(l){
   lang = l;
   localStorage.setItem('bnLang', l);
   const btn = document.getElementById('langToggleBtn');
-  if(btn) btn.textContent = l === 'en' ? '🇬🇧 EN' : '🇩🇪 DE';
+  if(btn) btn.textContent = l === 'en' ? 'ðŸ‡¬ðŸ‡§ EN' : 'ðŸ‡©ðŸ‡ª DE';
   applyLang();
   renderPosts(getAlgoSorted());
   renderConversations();
@@ -1581,9 +1658,9 @@ function applyLang(){
   });
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // CONSTANTS + STATE
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 const ADMIN_EMAIL = '963vikram963@gmail.com';
 const ADMIN_PASS = 'BerlinNest@Admin2026!';
 
@@ -1598,9 +1675,9 @@ let personalPhotos = [];
 let editingProfPhoto = null;
 let viewTimers = {};
 
-const ORTSTEILE = ['Kreuzberg','Prenzlauer Berg','Friedrichshain','Neukölln','Charlottenburg',
-  'Mitte','Wedding','Moabit','Schöneberg','Wilmersdorf','Tempelhof','Steglitz',
-  'Pankow','Lichtenberg','Treptow','Köpenick','Spandau','Reinickendorf'];
+const ORTSTEILE = ['Kreuzberg','Prenzlauer Berg','Friedrichshain','NeukÃ¶lln','Charlottenburg',
+  'Mitte','Wedding','Moabit','SchÃ¶neberg','Wilmersdorf','Tempelhof','Steglitz',
+  'Pankow','Lichtenberg','Treptow','KÃ¶penick','Spandau','Reinickendorf'];
 
 function randViews(){ return Math.floor(Math.random()*350)+80; }
 function randRating(){ return (Math.random()*1.2+3.8).toFixed(1)*1; }
@@ -1619,13 +1696,13 @@ let STATE = {
 function initData(){
   const now = Date.now();
   STATE.posts = [
-    {id:1,title:"Bright 2-Zimmer near Görlitzer Park",ortsteil:"Kreuzberg",type:"2-Zimmer",share:"private",size:65,cold:850,warm:950,deposit:2550,floor:3,anmeldung:"yes",desc:"Beautiful apartment with original Altbau details, newly renovated kitchen, and a sunny south-facing balcony. Close to all transport, cafes, and Görlitzer Park.",facilities:["Balcony","Kitchen","Pets OK"],images:[],postedBy:"maria_s",author:"Maria Schmidt",views:randViews(),displayViews:0,rating:4.8,comments:[],createdAt:randDaysAgo(2,4),isRecommended:false,recommendScore:0},
+    {id:1,title:"Bright 2-Zimmer near GÃ¶rlitzer Park",ortsteil:"Kreuzberg",type:"2-Zimmer",share:"private",size:65,cold:850,warm:950,deposit:2550,floor:3,anmeldung:"yes",desc:"Beautiful apartment with original Altbau details, newly renovated kitchen, and a sunny south-facing balcony. Close to all transport, cafes, and GÃ¶rlitzer Park.",facilities:["Balcony","Kitchen","Pets OK"],images:[],postedBy:"maria_s",author:"Maria Schmidt",views:randViews(),displayViews:0,rating:4.8,comments:[],createdAt:randDaysAgo(2,4),isRecommended:false,recommendScore:0},
     {id:2,title:"Cozy Studio in Prenzlauer Berg",ortsteil:"Prenzlauer Berg",type:"Studio",share:"studio",size:35,cold:580,warm:680,deposit:1740,floor:2,anmeldung:"yes",desc:"Perfect for students or young professionals. Fully furnished with brand-new appliances. 5 min from Mauerpark.",facilities:["Elevator","Kitchen","Furnished"],images:[],postedBy:"thomas_w",author:"Thomas Weber",views:randViews(),displayViews:0,rating:4.5,comments:[],createdAt:randDaysAgo(4,8),isRecommended:false,recommendScore:0},
-    {id:3,title:"Spacious 3-Zimmer Friedrichshain",ortsteil:"Friedrichshain",type:"3-Zimmer",share:"private",size:85,cold:1200,warm:1450,deposit:3600,floor:4,anmeldung:"yes",desc:"Modern apartment near Warschauer Straße with exposed concrete accents, large balcony, and Bosch appliances throughout.",facilities:["Balcony","Elevator","Kitchen","Dishwasher"],images:[],postedBy:"anna_m",author:"Anna Müller",views:randViews(),displayViews:0,rating:5.0,comments:[],createdAt:randDaysAgo(20,30),isRecommended:false,recommendScore:0},
-    {id:4,title:"WG-Zimmer near Tempelhofer Feld",ortsteil:"Neukölln",type:"WG-Zimmer",share:"shared",size:20,cold:400,warm:450,deposit:1200,floor:1,anmeldung:"yes",desc:"Friendly 4-person WG in a lively building. Communal garden, high-speed internet. Pets welcome!",facilities:["Garden","Kitchen","Washer","Pets OK"],images:[],postedBy:"leon_f",author:"Leon Fischer",views:randViews(),displayViews:0,rating:4.2,comments:[],createdAt:randDaysAgo(60,90),isRecommended:false,recommendScore:0},
-    {id:5,title:"Luxury 4-Zimmer near Ku'damm",ortsteil:"Charlottenburg",type:"4+ Zimmer",share:"private",size:120,cold:1800,warm:2100,deposit:5400,floor:5,anmeldung:"yes",desc:"Exclusive Altbau apartment on the prestigious Kurfürstendamm boulevard. Period features, chef's kitchen, underground parking.",facilities:["Balcony","Elevator","Kitchen","Dishwasher","Parking","Garden"],images:[],postedBy:"sophie_b",author:"Sophie Becker",views:randViews(),displayViews:0,rating:4.9,comments:[],createdAt:randDaysAgo(5,10),isRecommended:false,recommendScore:0},
+    {id:3,title:"Spacious 3-Zimmer Friedrichshain",ortsteil:"Friedrichshain",type:"3-Zimmer",share:"private",size:85,cold:1200,warm:1450,deposit:3600,floor:4,anmeldung:"yes",desc:"Modern apartment near Warschauer StraÃŸe with exposed concrete accents, large balcony, and Bosch appliances throughout.",facilities:["Balcony","Elevator","Kitchen","Dishwasher"],images:[],postedBy:"anna_m",author:"Anna MÃ¼ller",views:randViews(),displayViews:0,rating:5.0,comments:[],createdAt:randDaysAgo(20,30),isRecommended:false,recommendScore:0},
+    {id:4,title:"WG-Zimmer near Tempelhofer Feld",ortsteil:"NeukÃ¶lln",type:"WG-Zimmer",share:"shared",size:20,cold:400,warm:450,deposit:1200,floor:1,anmeldung:"yes",desc:"Friendly 4-person WG in a lively building. Communal garden, high-speed internet. Pets welcome!",facilities:["Garden","Kitchen","Washer","Pets OK"],images:[],postedBy:"leon_f",author:"Leon Fischer",views:randViews(),displayViews:0,rating:4.2,comments:[],createdAt:randDaysAgo(60,90),isRecommended:false,recommendScore:0},
+    {id:5,title:"Luxury 4-Zimmer near Ku'damm",ortsteil:"Charlottenburg",type:"4+ Zimmer",share:"private",size:120,cold:1800,warm:2100,deposit:5400,floor:5,anmeldung:"yes",desc:"Exclusive Altbau apartment on the prestigious KurfÃ¼rstendamm boulevard. Period features, chef's kitchen, underground parking.",facilities:["Balcony","Elevator","Kitchen","Dishwasher","Parking","Garden"],images:[],postedBy:"sophie_b",author:"Sophie Becker",views:randViews(),displayViews:0,rating:4.9,comments:[],createdAt:randDaysAgo(5,10),isRecommended:false,recommendScore:0},
     {id:6,title:"Modern 1-Zimmer near Alexanderplatz",ortsteil:"Mitte",type:"1-Zimmer",share:"private",size:42,cold:720,warm:820,deposit:2160,floor:6,anmeldung:"yes",desc:"Sleek city-centre apartment with floor-to-ceiling windows. Everything at your doorstep.",facilities:["Elevator","Kitchen"],images:[],postedBy:"max_k",author:"Max Klein",views:randViews(),displayViews:0,rating:4.6,comments:[],createdAt:randDaysAgo(7,14),isRecommended:false,recommendScore:0},
-    {id:7,title:"Affordable Studio in Wedding",ortsteil:"Wedding",type:"Studio",share:"studio",size:28,cold:480,warm:550,deposit:1440,floor:2,anmeldung:"yes",desc:"Budget-friendly near U-Bahn Seestraße. Newly painted with modern bathroom.",facilities:["Kitchen"],images:[],postedBy:"lena_s",author:"Lena Schmidt",views:randViews(),displayViews:0,rating:4.3,comments:[],createdAt:randDaysAgo(14,30),isRecommended:false,recommendScore:0},
+    {id:7,title:"Affordable Studio in Wedding",ortsteil:"Wedding",type:"Studio",share:"studio",size:28,cold:480,warm:550,deposit:1440,floor:2,anmeldung:"yes",desc:"Budget-friendly near U-Bahn SeestraÃŸe. Newly painted with modern bathroom.",facilities:["Kitchen"],images:[],postedBy:"lena_s",author:"Lena Schmidt",views:randViews(),displayViews:0,rating:4.3,comments:[],createdAt:randDaysAgo(14,30),isRecommended:false,recommendScore:0},
     {id:8,title:"River View 3-Zimmer Treptow",ortsteil:"Treptow",type:"3-Zimmer",share:"private",size:88,cold:1100,warm:1300,deposit:3300,floor:3,anmeldung:"yes",desc:"Stunning views of the Spree river from every room. Spacious balcony, quiet neighbourhood.",facilities:["Balcony","Kitchen","Parking","Pets OK"],images:[],postedBy:"lisa_w",author:"Lisa Wolf",views:randViews(),displayViews:0,rating:4.7,comments:[],createdAt:randDaysAgo(45,70),isRecommended:false,recommendScore:0},
   ];
 
@@ -1634,9 +1711,9 @@ function initData(){
   });
 
   STATE.users = {
-    maria_s:{username:"maria_s",name:"Maria Schmidt",email:"maria@test.de",photo:null,bio:"Architecture lover & Berlin local 🏛️",personalPhotos:[],posts:1,rating:4.8,reviews:12,followers:[],following:[],isAdmin:false},
-    thomas_w:{username:"thomas_w",name:"Thomas Weber",email:"thomas@test.de",photo:null,bio:"Student @ TU Berlin 📚",personalPhotos:[],posts:1,rating:4.5,reviews:8,followers:[],following:[],isAdmin:false},
-    anna_m:{username:"anna_m",name:"Anna Müller",email:"anna@test.de",photo:null,bio:"Coffee enthusiast ☕ Kreuzberg is home",personalPhotos:[],posts:1,rating:5.0,reviews:15,followers:[],following:[],isAdmin:false},
+    maria_s:{username:"maria_s",name:"Maria Schmidt",email:"maria@test.de",photo:null,bio:"Architecture lover & Berlin local ðŸ›ï¸",personalPhotos:[],posts:1,rating:4.8,reviews:12,followers:[],following:[],isAdmin:false},
+    thomas_w:{username:"thomas_w",name:"Thomas Weber",email:"thomas@test.de",photo:null,bio:"Student @ TU Berlin ðŸ“š",personalPhotos:[],posts:1,rating:4.5,reviews:8,followers:[],following:[],isAdmin:false},
+    anna_m:{username:"anna_m",name:"Anna MÃ¼ller",email:"anna@test.de",photo:null,bio:"Coffee enthusiast â˜• Kreuzberg is home",personalPhotos:[],posts:1,rating:5.0,reviews:15,followers:[],following:[],isAdmin:false},
   };
 
   STATE.conversations = [
@@ -1647,19 +1724,19 @@ function initData(){
   ];
 
   STATE.groups = [
-    {id:'g1',name:'Berlin Renters Forum 🏙️',desc:'Tips & advice for renting in Berlin',creator:'admin',members:['maria_s','thomas_w','anna_m'],messages:[
-      {id:'gm1',sender:'thomas_w',text:'Anyone know if Neukölln prices are going up?',time:Date.now()-7200000,type:'text'},
-      {id:'gm2',sender:'anna_m',text:'Yes, seen a 15% increase this year 😬',time:Date.now()-7000000,type:'text'},
+    {id:'g1',name:'Berlin Renters Forum ðŸ™ï¸',desc:'Tips & advice for renting in Berlin',creator:'admin',members:['maria_s','thomas_w','anna_m'],messages:[
+      {id:'gm1',sender:'thomas_w',text:'Anyone know if NeukÃ¶lln prices are going up?',time:Date.now()-7200000,type:'text'},
+      {id:'gm2',sender:'anna_m',text:'Yes, seen a 15% increase this year ðŸ˜¬',time:Date.now()-7000000,type:'text'},
     ],lastMsg:'Yes, seen a 15% increase',lastTime:Date.now()-7000000},
   ];
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // SMART VIEW ALGORITHM
-// ═══════════════════════════════════════
-// Rule: 1 real view → displayViews += 2 immediately
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Rule: 1 real view â†’ displayViews += 2 immediately
 //       Then 1 more fake view added after 2 min
-//       E.g. 5 real views → +10 display views immediately
+//       E.g. 5 real views â†’ +10 display views immediately
 
 function recordRealView(postId){
   const p = STATE.posts.find(x=>x.id===postId);
@@ -1682,7 +1759,7 @@ function softRerenderViews(){
   // Just update view counts without full re-render
   STATE.posts.forEach(p=>{
     const badges = document.querySelectorAll(`.views-badge[data-postid="${p.id}"]`);
-    badges.forEach(b=>{ b.innerHTML = `👁 ${formatViews(p.displayViews)}`; });
+    badges.forEach(b=>{ b.innerHTML = `ðŸ‘ ${formatViews(p.displayViews)}`; });
   });
 }
 
@@ -1691,51 +1768,51 @@ function formatViews(n){
   return n;
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // RECOMMENDATION ALGORITHM
-// ═══════════════════════════════════════
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // SMART RECOMMENDATION ALGORITHM
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // 6-factor scoring designed for Berlin rentals:
 //
-// 1. VIEW VELOCITY  — views per hour (recency-weighted momentum)
-// 2. FRESHNESS DECAY — exponential decay so new posts always compete
-// 3. ENGAGEMENT SIGNAL — contact clicks + comments = real intent
-// 4. USER TRUST SCORE — active users with ratings get a lift
-// 5. PRICE COMPETITIVENESS — below-average price for area/type = boost
-// 6. COMPLETENESS BONUS — photos + full details = quality signal
+// 1. VIEW VELOCITY  â€” views per hour (recency-weighted momentum)
+// 2. FRESHNESS DECAY â€” exponential decay so new posts always compete
+// 3. ENGAGEMENT SIGNAL â€” contact clicks + comments = real intent
+// 4. USER TRUST SCORE â€” active users with ratings get a lift
+// 5. PRICE COMPETITIVENESS â€” below-average price for area/type = boost
+// 6. COMPLETENESS BONUS â€” photos + full details = quality signal
 
 function calcScore(post){
   const now = Date.now();
   const ageHours = Math.max(0.1, (now - post.createdAt) / 3600000);
   const ageDays = ageHours / 24;
 
-  // ── 1. VIEW VELOCITY (views per hour, capped to avoid manipulation)
+  // â”€â”€ 1. VIEW VELOCITY (views per hour, capped to avoid manipulation)
   // A post with 100 views in 2h scores higher than 200 views in 72h
   const rawVelocity = post.views / ageHours;
   const viewVelocity = Math.min(rawVelocity, 50) * 2.5; // cap at 50 v/h, weight 2.5
 
-  // ── 2. FRESHNESS DECAY (exponential — halves every 3 days)
+  // â”€â”€ 2. FRESHNESS DECAY (exponential â€” halves every 3 days)
   // Posts under 24h get a strong boost; after 30 days they settle
   let freshness;
   if(ageDays < 0.5)       freshness = 100;                           // first 12h: top slot
-  else if(ageDays < 1)    freshness = 85;                            // 12–24h
-  else if(ageDays < 3)    freshness = 70 * Math.exp(-0.15 * ageDays); // 1–3 days
+  else if(ageDays < 1)    freshness = 85;                            // 12â€“24h
+  else if(ageDays < 3)    freshness = 70 * Math.exp(-0.15 * ageDays); // 1â€“3 days
   else if(ageDays < 14)   freshness = 55 * Math.exp(-0.08 * ageDays); // week+
   else                    freshness = Math.max(8, 30 * Math.exp(-0.05 * ageDays)); // floor at 8
 
-  // ── 3. ENGAGEMENT SIGNAL (contacts + comments = real interest)
+  // â”€â”€ 3. ENGAGEMENT SIGNAL (contacts + comments = real interest)
   const engagements = (post.contacts || 0) + (post.comments.length * 2);
   const engagementScore = Math.log1p(engagements) * 8;
 
-  // ── 4. USER TRUST (poster's post count + rating history)
+  // â”€â”€ 4. USER TRUST (poster's post count + rating history)
   const posterPosts = STATE.posts.filter(p => p.postedBy === post.postedBy).length;
   const poster = STATE.users[post.postedBy];
   const posterRating = poster ? poster.rating : 4.0;
   const trustScore = (Math.log1p(posterPosts) * 4) + ((posterRating - 3) * 6);
 
-  // ── 5. PRICE COMPETITIVENESS (cheaper than area average = boost)
+  // â”€â”€ 5. PRICE COMPETITIVENESS (cheaper than area average = boost)
   const sameCat = STATE.posts.filter(p =>
     p.ortsteil === post.ortsteil && p.type === post.type && p.id !== post.id
   );
@@ -1746,13 +1823,13 @@ function calcScore(post){
     priceScore = Math.max(-5, Math.min(15, priceDiff * 25));
   }
 
-  // ── 6. COMPLETENESS BONUS (photos, description quality, facilities)
+  // â”€â”€ 6. COMPLETENESS BONUS (photos, description quality, facilities)
   const photoBonus  = Math.min(post.images.length, 6) * 1.5;   // up to 9pts
   const descBonus   = Math.min(post.desc.length / 80, 5);       // up to 5pts (80 chars/pt)
   const facBonus    = Math.min(post.facilities.length, 5) * 1;  // up to 5pts
   const completeness = photoBonus + descBonus + facBonus;
 
-  // ── FINAL SCORE (weighted sum)
+  // â”€â”€ FINAL SCORE (weighted sum)
   const total = viewVelocity + freshness + engagementScore + trustScore + priceScore + completeness;
 
   return Math.max(0, total);
@@ -1768,14 +1845,14 @@ function getAlgoSorted(){
   return scored.map((p, i) => ({ ...p, isRecommended: i < 3 }));
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // RENDER POSTS
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 function renderPosts(list){
   const grid = document.getElementById('postsGrid');
   if(!list || !list.length){
-    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);"><div style="font-size:3rem;margin-bottom:1rem;">🔍</div><p>${lang==='en'?'No listings found. Try adjusting your filters.':'Keine Inserate gefunden.'}</p></div>`;
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);"><div style="font-size:3rem;margin-bottom:1rem;">ðŸ”</div><p>${lang==='en'?'No listings found. Try adjusting your filters.':'Keine Inserate gefunden.'}</p></div>`;
     return;
   }
   grid.innerHTML = list.map(p => renderCard(p)).join('');
@@ -1792,59 +1869,59 @@ function renderCard(p){
   const nebenkosten = p.warm - p.cold;
 
   return `<div class="pcard" id="card-${p.id}">
-    ${p.isRecommended ? `<div class="rec-badge">⭐ ${lang==='en'?'Recommended':'Empfohlen'}</div>` : ''}
+    ${p.isRecommended ? `<div class="rec-badge">â­ ${lang==='en'?'Recommended':'Empfohlen'}</div>` : ''}
     <div class="pcard-images">
       ${p.images&&p.images.length ? 
         `<div class="pcard-img-scroll">${p.images.map(img=>`<img src="${img}" alt="${p.title}">`).join('')}</div>` :
-        `<div class="pcard-placeholder">🏠</div>`}
+        `<div class="pcard-placeholder">ðŸ </div>`}
       <div class="type-badge">${p.type}</div>
-      <div class="views-badge" data-postid="${p.id}">👁 ${formatViews(p.displayViews)}</div>
+      <div class="views-badge" data-postid="${p.id}">ðŸ‘ ${formatViews(p.displayViews)}</div>
     </div>
     <div class="pcard-body">
       <div class="pcard-top">
         <div class="pcard-title" onclick="openPostDetail(${p.id})">${p.title}</div>
-        <div class="pcard-rating">⭐ ${p.rating}</div>
+        <div class="pcard-rating">â­ ${p.rating}</div>
       </div>
       <div class="pcard-author">
         <div class="author-ava" onclick="viewUserProfile('${p.postedBy}')">
           ${authorProf&&authorProf.photo ? `<img src="${authorProf.photo}">` : (p.author[0]||'?')}
         </div>
         <span class="author-name" onclick="viewUserProfile('${p.postedBy}')">${p.author}</span>
-        <span class="author-location">📍 ${p.ortsteil}</span>
+        <span class="author-location">ðŸ“ ${p.ortsteil}</span>
       </div>
       <div class="pcard-details">
-        <div class="detail-chip"><div class="dval">${p.size}m²</div><div class="dlbl">${lang==='en'?'Size':'Größe'}</div></div>
+        <div class="detail-chip"><div class="dval">${p.size}mÂ²</div><div class="dlbl">${lang==='en'?'Size':'GrÃ¶ÃŸe'}</div></div>
         <div class="detail-chip"><div class="dval">${shareLabel}</div><div class="dlbl">${lang==='en'?'Type':'Art'}</div></div>
         <div class="detail-chip"><div class="dval">${p.floor||0}</div><div class="dlbl">${lang==='en'?'Floor':'Etage'}</div></div>
       </div>
       <div class="price-row">
-        <span class="price-main">€${p.warm}</span>
+        <span class="price-main">â‚¬${p.warm}</span>
         <span class="price-warm">${t('month')} (${t('warm')})</span>
-        <span class="price-deposit">💰 €${p.deposit||0} ${t('deposit')}</span>
+        <span class="price-deposit">ðŸ’° â‚¬${p.deposit||0} ${t('deposit')}</span>
       </div>
       ${p.facilities&&p.facilities.length ? 
         `<div class="tags-row">${p.facilities.slice(0,5).map(f=>`<span class="tag">${f}</span>`).join('')}</div>` : ''}
       <div class="pcard-desc">${p.desc}</div>
       <div class="pcard-actions">
         ${isOwner ? `
-          <button class="btn-edit-post" onclick="openEditPost(${p.id})">✏️ ${lang==='en'?'Edit':'Bearbeiten'}</button>
-          <button class="btn-contact" onclick="openContactChat('${p.postedBy}',${p.id})">💬 ${t('contact')}</button>
+          <button class="btn-edit-post" onclick="openEditPost(${p.id})">âœï¸ ${lang==='en'?'Edit':'Bearbeiten'}</button>
+          <button class="btn-contact" onclick="openContactChat('${p.postedBy}',${p.id})">ðŸ’¬ ${t('contact')}</button>
         ` : `
           <button class="btn-details" onclick="openPostDetail(${p.id})">${t('details_btn')}</button>
-          <button class="btn-contact" onclick="openContactChat('${p.postedBy}',${p.id})">💬 ${t('contact')}</button>
-          <button class="btn-report-subtle" onclick="openReport(${p.id},'${p.postedBy}')" title="${t('report')}">⚑</button>
+          <button class="btn-contact" onclick="openContactChat('${p.postedBy}',${p.id})">ðŸ’¬ ${t('contact')}</button>
+          <button class="btn-report-subtle" onclick="openReport(${p.id},'${p.postedBy}')" title="${t('report')}">âš‘</button>
         `}
       </div>
       ${isAdmin ? `
         <div class="admin-actions">
-          <button class="btn-admin edit" onclick="adminEditPost(${p.id})">✏️ Edit</button>
-          <button class="btn-admin del" onclick="adminDeletePost(${p.id})">🗑 Delete</button>
+          <button class="btn-admin edit" onclick="adminEditPost(${p.id})">âœï¸ Edit</button>
+          <button class="btn-admin del" onclick="adminDeletePost(${p.id})">ðŸ—‘ Delete</button>
         </div>` : ''}
       <div class="pcard-stats">
-        <span>💬 ${p.comments.length}</span>
-        <span>⭐ ${p.rating}</span>
-        <span>🕐 ${timeAgo(p.createdAt)}</span>
-        ${p.anmeldung==='yes' ? `<span>✅ ${lang==='en'?'Anmeldung':'Anmeldung'}</span>` : `<span>❌ ${lang==='en'?'No Anm.':'Keine Anm.'}</span>`}
+        <span>ðŸ’¬ ${p.comments.length}</span>
+        <span>â­ ${p.rating}</span>
+        <span>ðŸ• ${timeAgo(p.createdAt)}</span>
+        ${p.anmeldung==='yes' ? `<span>âœ… ${lang==='en'?'Anmeldung':'Anmeldung'}</span>` : `<span>âŒ ${lang==='en'?'No Anm.':'Keine Anm.'}</span>`}
       </div>
     </div>
   </div>`;
@@ -1859,9 +1936,9 @@ function timeAgo(ts){
   return Math.floor(diff/(d*30))+(lang==='en'?' mo ago':' Mon. her');
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // FILTERS
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 let filterState = { type:'', ortsteil:'', price:'', search:'' };
 function clearFilters(){
   filterState = {type:'',ortsteil:'',price:'',search:''};
@@ -1894,9 +1971,9 @@ function applyFilters(){
   renderPosts(list);
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // POST DETAIL
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function openPostDetail(id){
   const p = STATE.posts.find(x=>x.id===id);
   if(!p) return;
@@ -1906,51 +1983,51 @@ function openPostDetail(id){
     <div class="post-detail-gallery">
       ${p.images&&p.images.length ? 
         `<div class="pdg-scroll">${p.images.map(img=>`<img src="${img}">`).join('')}</div>` :
-        `<div class="pdg-placeholder">🏠</div>`}
+        `<div class="pdg-placeholder">ðŸ </div>`}
     </div>
     <h2 style="font-size:1.4rem;color:var(--primary);margin-bottom:0.5rem;">${p.title}</h2>
     <div style="display:flex;gap:1rem;color:var(--text-light);font-size:0.85rem;margin-bottom:1.25rem;flex-wrap:wrap;">
-      <span>📍 ${p.ortsteil}</span><span>🏠 ${p.type}</span><span>📐 ${p.size}m²</span>
-      <span>👁 ${formatViews(p.displayViews)} ${lang==='en'?'views':'Aufrufe'}</span>
+      <span>ðŸ“ ${p.ortsteil}</span><span>ðŸ  ${p.type}</span><span>ðŸ“ ${p.size}mÂ²</span>
+      <span>ðŸ‘ ${formatViews(p.displayViews)} ${lang==='en'?'views':'Aufrufe'}</span>
     </div>
     <div class="post-detail-price">
-      <div class="pdp-main">€${p.warm}<span style="font-size:1rem;font-weight:400;">${t('month')}</span></div>
-      <div class="pdp-sub">${lang==='en'?'All inclusive (Warmmiete)':'Alles inklusive (Warmmiete)'}</div>
+      <div class="pdp-main">â‚¬${p.warm}<span style="font-size:1rem;font-weight:400;">${t('month')}</span></div>
+      <div class="pdp-sub">${lang==='en'?'All inclusive (Rent + utilities)':'Alles inklusive (Miete + Nebenkosten)'}</div>
       <div class="pdp-breakdown">
-        <div class="pdp-item"><div class="pdp-val">€${p.cold}</div><div class="pdp-lbl">Kaltmiete</div></div>
-        <div class="pdp-item"><div class="pdp-val">€${nebenkosten}</div><div class="pdp-lbl">Nebenkosten</div></div>
-        <div class="pdp-item"><div class="pdp-val">€${p.deposit||0}</div><div class="pdp-lbl">Kaution</div></div>
+        <div class="pdp-item"><div class="pdp-val">â‚¬${p.cold}</div><div class="pdp-lbl">Rent</div></div>
+        <div class="pdp-item"><div class="pdp-val">â‚¬${nebenkosten}</div><div class="pdp-lbl">Utilities</div></div>
+        <div class="pdp-item"><div class="pdp-val">â‚¬${p.deposit||0}</div><div class="pdp-lbl">Deposit</div></div>
       </div>
     </div>
     <div class="post-detail-grid">
-      <div class="pdg-item"><div class="icon">🏢</div><div class="val">${p.type}</div><div class="lbl">${lang==='en'?'Apartment Type':'Wohnungstyp'}</div></div>
-      <div class="pdg-item"><div class="icon">🔒</div><div class="val">${p.share==='private'?t('private'):p.share==='shared'?t('shared'):t('studio')}</div><div class="lbl">${lang==='en'?'Sharing':'Art'}</div></div>
-      <div class="pdg-item"><div class="icon">📐</div><div class="val">${p.size}m²</div><div class="lbl">${lang==='en'?'Size':'Größe'}</div></div>
-      <div class="pdg-item"><div class="icon">🏗️</div><div class="val">${lang==='en'?'Floor':'Etage'} ${p.floor||0}</div><div class="lbl">${lang==='en'?'Level':'Ebene'}</div></div>
-      <div class="pdg-item"><div class="icon">📋</div><div class="val">${p.anmeldung==='yes'?'✅ '+t('yes'):'❌ '+t('no')}</div><div class="lbl">Anmeldung</div></div>
-      <div class="pdg-item"><div class="icon">⭐</div><div class="val">${p.rating}</div><div class="lbl">${lang==='en'?'Rating':'Bewertung'}</div></div>
+      <div class="pdg-item"><div class="icon">ðŸ¢</div><div class="val">${p.type}</div><div class="lbl">${lang==='en'?'Apartment Type':'Wohnungstyp'}</div></div>
+      <div class="pdg-item"><div class="icon">ðŸ”’</div><div class="val">${p.share==='private'?t('private'):p.share==='shared'?t('shared'):t('studio')}</div><div class="lbl">${lang==='en'?'Sharing':'Art'}</div></div>
+      <div class="pdg-item"><div class="icon">ðŸ“</div><div class="val">${p.size}mÂ²</div><div class="lbl">${lang==='en'?'Size':'GrÃ¶ÃŸe'}</div></div>
+      <div class="pdg-item"><div class="icon">ðŸ—ï¸</div><div class="val">${lang==='en'?'Floor':'Etage'} ${p.floor||0}</div><div class="lbl">${lang==='en'?'Level':'Ebene'}</div></div>
+      <div class="pdg-item"><div class="icon">ðŸ“‹</div><div class="val">${p.anmeldung==='yes'?'âœ… '+t('yes'):'âŒ '+t('no')}</div><div class="lbl">Anmeldung</div></div>
+      <div class="pdg-item"><div class="icon">â­</div><div class="val">${p.rating}</div><div class="lbl">${lang==='en'?'Rating':'Bewertung'}</div></div>
     </div>
     ${p.facilities&&p.facilities.length ? `
       <div class="section-label">${lang==='en'?'Facilities':'Ausstattung'}</div>
-      <div class="tags-row">${p.facilities.map(f=>`<span class="tag">✓ ${f}</span>`).join('')}</div>` : ''}
+      <div class="tags-row">${p.facilities.map(f=>`<span class="tag">âœ“ ${f}</span>`).join('')}</div>` : ''}
     <div class="section-label">${lang==='en'?'Description':'Beschreibung'}</div>
     <p style="color:var(--text-mid);font-size:0.9rem;line-height:1.7;margin-bottom:1.25rem;">${p.desc}</p>
     <a class="map-link" href="https://www.google.com/maps/search/${encodeURIComponent(p.ortsteil+' Berlin')}" target="_blank">
-      🗺️ ${lang==='en'?'View on Google Maps':'Auf Google Maps ansehen'}
+      ðŸ—ºï¸ ${lang==='en'?'View on Google Maps':'Auf Google Maps ansehen'}
     </a>
     <div style="display:flex;gap:0.75rem;margin-top:1rem;">
-      <button class="btn-contact" style="flex:1;" onclick="openContactChat('${p.postedBy}');closeModal('postDetailModal')">💬 ${t('contact')}</button>
+      <button class="btn-contact" style="flex:1;" onclick="openContactChat('${p.postedBy}');closeModal('postDetailModal')">ðŸ’¬ ${t('contact')}</button>
       ${currentUser && p.postedBy!==currentUser.username ? 
-        `<button class="btn-report-subtle" onclick="openReport(${p.id},'${p.postedBy}')">⚑ ${t('report')}</button>` : ''}
+        `<button class="btn-report-subtle" onclick="openReport(${p.id},'${p.postedBy}')">âš‘ ${t('report')}</button>` : ''}
     </div>`;
   openModal('postDetailModal');
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // AUTH
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function handleGoogleAuth(mode){
-  toast(`${lang==='en'?'Google Auth coming soon!':'Google Auth demnächst!'}`);
+  toast(`${lang==='en'?'Google Auth coming soon!':'Google Auth demnÃ¤chst!'}`);
 }
 
 function handleLogin(e){
@@ -1968,10 +2045,11 @@ function handleLogin(e){
   
   currentUser = {...STATE.users[username], isAdmin};
   STATE.users[username].isAdmin = isAdmin;
+  localStorage.setItem('bnCurrentUser', JSON.stringify(currentUser));
   closeModal('loginModal');
   updateNav();
-  if(isAdmin) toast(`🛡️ Admin login! Welcome ${name}`);
-  else toast(`👋 Welcome back, ${name}!`);
+  if(isAdmin) toast(`ðŸ›¡ï¸ Admin login! Welcome ${name}`);
+  else toast(`ðŸ‘‹ Welcome back, ${name}!`);
 }
 
 function handleSignup(e){
@@ -1986,9 +2064,10 @@ function handleSignup(e){
   const u = {username,name,email,gender,photo:null,bio:'',personalPhotos:[],posts:0,rating:5.0,reviews:0,followers:[],following:[],isAdmin:false};
   STATE.users[username] = u;
   currentUser = u;
+  localStorage.setItem('bnCurrentUser', JSON.stringify(currentUser));
   closeModal('signupModal');
   updateNav();
-  toast(`🎉 Welcome to BerlinNest, ${name}!`);
+  toast(`ðŸŽ‰ Welcome to BerlinNest, ${name}!`);
 }
 
 function checkUser(input, hintId){
@@ -2000,14 +2079,14 @@ function checkUser(input, hintId){
     hint.textContent = (lang==='en'?'Taken. Try: ':'Vergeben. Versuche: ')+suggs.join(', ');
     hint.className='username-hint bad';
   } else {
-    hint.textContent = lang==='en'?'✓ Available':'✓ Verfügbar';
+    hint.textContent = lang==='en'?'âœ“ Available':'âœ“ VerfÃ¼gbar';
     hint.className='username-hint ok';
   }
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // POST ACTIONS
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function handlePostClick(){
   if(!currentUser){ openModal('loginModal'); return; }
   openModal('postModal');
@@ -2046,7 +2125,7 @@ function handlePost(e){
   postImages=[];
   document.getElementById('pImgPreviews').innerHTML='';
   renderPosts(getAlgoSorted());
-  toast(lang==='en'?'🏠 Listing published!':'🏠 Inserat veröffentlicht!');
+  toast(lang==='en'?'ðŸ  Listing published!':'ðŸ  Inserat verÃ¶ffentlicht!');
 }
 
 function openEditPost(id){
@@ -2071,19 +2150,19 @@ function handleEditPost(e){
   p.deposit = parseInt(document.getElementById('eptDeposit').value)||0;
   closeModal('editPostModal');
   renderPosts(getAlgoSorted());
-  toast(lang==='en'?'✅ Post updated!':'✅ Beitrag aktualisiert!');
+  toast(lang==='en'?'âœ… Post updated!':'âœ… Beitrag aktualisiert!');
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // PROFILE
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function renderProfile(username){
   const targetUser = username ? STATE.users[username] : (currentUser ? STATE.users[currentUser.username] : null);
   const isOwn = !username || (currentUser && username===currentUser.username);
   const container = document.getElementById('profileContent');
   if(!targetUser || (!currentUser && isOwn)){
     container.innerHTML = `<div style="text-align:center;padding:4rem 1rem;">
-      <div style="font-size:4rem;margin-bottom:1rem;">👤</div>
+      <div style="font-size:4rem;margin-bottom:1rem;">ðŸ‘¤</div>
       <h2 style="color:var(--primary);margin-bottom:0.75rem;">${lang==='en'?'Sign in to view your profile':'Anmelden um Profil zu sehen'}</h2>
       <button class="btn-full" style="max-width:280px;margin:0 auto;" onclick="openModal('loginModal')">${t('sign_in')}</button>
     </div>`;
@@ -2111,11 +2190,14 @@ function renderProfile(username){
         <div class="pstat"><div class="pstat-val">${targetUser.rating}</div><div class="pstat-lbl">Rating</div></div>
       </div>
       <div class="profile-actions">
-        ${isOwn ? `<button class="btn-edit-profile" onclick="openEditProfileModal()">${t('edit_profile_btn')}</button>` :
+        ${isOwn ? `
+          <button class="btn-edit-profile" onclick="openEditProfileModal()">${t('edit_profile_btn')}</button>
+          ${currentUser.isAdmin ? `<button class="btn-admin-portal" onclick="showPage('admin')">ðŸ›¡ï¸ Admin Panel</button>` : ''}
+        ` :
           `<button class="btn-follow ${isFollowing?'following':''}" onclick="toggleFollow('${targetUser.username}')">
             ${isFollowing ? t('following') : t('follow')}
           </button>
-          <button class="btn-edit-profile" onclick="openContactChat('${targetUser.username}')">💬 ${t('contact')}</button>`}
+          <button class="btn-edit-profile" onclick="openContactChat('${targetUser.username}')">ðŸ’¬ ${t('contact')}</button>`}
       </div>
     </div>
     <div class="profile-tabs">
@@ -2134,7 +2216,7 @@ function renderProfile(username){
     <div id="ptab-content-photos" class="ptab-content">
       ${isOwn ? `
         <div class="personal-photos-upload-area" onclick="document.getElementById('profGalleryUpload').click()">
-          📸 ${lang==='en'?'Add photos to your gallery':'Fotos zur Galerie hinzufügen'}
+          ðŸ“¸ ${lang==='en'?'Add photos to your gallery':'Fotos zur Galerie hinzufÃ¼gen'}
         </div>
         <input type="file" id="profGalleryUpload" multiple accept="image/*" style="display:none" onchange="addGalleryPhotos(this)">` : ''}
       ${(targetUser.personalPhotos||[]).length ? 
@@ -2205,7 +2287,7 @@ function openEditProfileModal(){
   editingProfPhoto = u.photo;
   const preview = document.getElementById('profPhotoPreview');
   if(u.photo){ preview.innerHTML=`<img src="${u.photo}">`; }
-  else { preview.textContent='📷'; }
+  else { preview.textContent='ðŸ“·'; }
   personalPhotos = [...(u.personalPhotos||[])];
   renderPersPhotosPreviews();
   openModal('editProfileModal');
@@ -2249,7 +2331,7 @@ function renderPersPhotosPreviews(){
   c.innerHTML=personalPhotos.map((p,i)=>`
     <div class="img-prev">
       <img src="${p}">
-      <div class="img-prev-del" onclick="removePersPhoto(${i})">×</div>
+      <div class="img-prev-del" onclick="removePersPhoto(${i})">Ã—</div>
     </div>`).join('');
 }
 
@@ -2274,11 +2356,11 @@ function handleEditProfile(e){
   u.photo=editingProfPhoto;
   u.personalPhotos=[...personalPhotos];
   currentUser={...u};
-  
+  saveSession();
   closeModal('editProfileModal');
   updateNav();
   renderProfile();
-  toast(lang==='en'?'✅ Profile saved!':'✅ Profil gespeichert!');
+  toast(lang==='en'?'âœ… Profile saved!':'âœ… Profil gespeichert!');
 }
 
 function viewUserProfile(username){
@@ -2310,17 +2392,17 @@ function viewUserProfile(username){
         <button class="btn-follow ${isFollowing?'following':''}" onclick="toggleFollow('${username}');closeModal('userProfileModal');renderProfile();">
           ${isFollowing?t('following'):t('follow')}
         </button>
-        <button class="btn-contact" onclick="openContactChat('${username}');closeModal('userProfileModal')">💬 ${t('contact')}</button>
+        <button class="btn-contact" onclick="openContactChat('${username}');closeModal('userProfileModal')">ðŸ’¬ ${t('contact')}</button>
       ` : `<button class="btn-full" onclick="closeModal('userProfileModal');openModal('loginModal')">${t('sign_in')}</button>`}
     </div>
     ${userPosts.length ? `
       <div class="section-label">${t('listings_tab')}</div>
       ${userPosts.slice(0,3).map(p=>`
         <div class="conv-item" style="border-radius:10px;margin-bottom:0.5rem;border:1px solid var(--border);" onclick="openPostDetail(${p.id});closeModal('userProfileModal')">
-          <div class="conv-ava" style="background:var(--primary-mid);color:#fff;font-size:1.2rem;border-radius:8px;">🏠</div>
+          <div class="conv-ava" style="background:var(--primary-mid);color:#fff;font-size:1.2rem;border-radius:8px;">ðŸ </div>
           <div class="conv-info">
             <div class="conv-name">${p.title}</div>
-            <div class="conv-preview">📍 ${p.ortsteil} · €${p.warm}${t('month')}</div>
+            <div class="conv-preview">ðŸ“ ${p.ortsteil} Â· â‚¬${p.warm}${t('month')}</div>
           </div>
         </div>`).join('')}` : ''}
     ${(u.personalPhotos||[]).length ? `
@@ -2330,9 +2412,9 @@ function viewUserProfile(username){
   openModal('userProfileModal');
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // MESSAGING & GROUPS
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 let msgsTab = 'dms';
 
 function switchMsgsTab(tab){
@@ -2364,7 +2446,7 @@ function renderConversations(){
     list.innerHTML = myGroups.map(g=>`
       <div class="conv-item ${currentConvId===g.id?'active':''}" onclick="openConv('${g.id}','group')">
         <div class="conv-ava group">${g.name[0]}</div>
-        <div class="conv-info"><div class="conv-name">${g.name}</div><div class="conv-preview">${g.lastMsg||''} · ${g.members.length} members</div></div>
+        <div class="conv-info"><div class="conv-name">${g.name}</div><div class="conv-preview">${g.lastMsg||''} Â· ${g.members.length} members</div></div>
         <div class="conv-time">${timeAgo(g.lastTime||Date.now())}</div>
       </div>`).join('');
   }
@@ -2464,7 +2546,7 @@ function sendChatImage(input){
     if(!data) return;
     const msg = {id:'m'+Date.now(), sender:currentUser.username, text:e.target.result, time:Date.now(), type:'image'};
     data.messages.push(msg);
-    data.lastMsg = '📷 Photo';
+    data.lastMsg = 'ðŸ“· Photo';
     data.lastTime = Date.now();
     renderChatMsgs(data.messages, !!isGroup);
     renderConversations();
@@ -2497,9 +2579,9 @@ function handleCreateGroup(e){
   toast(lang==='en'?`Group "${name}" created!`:`Gruppe "${name}" erstellt!`);
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // REPORT
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function openReport(postId, username){
   if(!currentUser){ openModal('loginModal'); return; }
   reportTarget = {postId, username};
@@ -2517,50 +2599,112 @@ function handleReport(e){
     reportedBy: currentUser.username,
     time: Date.now(), reviewed: false
   });
-  console.log('📧 REPORT EMAIL → 963vikram963@gmail.com', {reason,details,target:reportTarget});
+  console.log('ðŸ“§ REPORT EMAIL â†’ 963vikram963@gmail.com', {reason,details,target:reportTarget});
   closeModal('reportModal');
   document.getElementById('reportModal').querySelector('form').reset();
   updateAdminDot();
-  toast(lang==='en'?'Report submitted. Admin will review shortly.':'Meldung eingereicht. Admin prüft demnächst.');
+  toast(lang==='en'?'Report submitted. Admin will review shortly.':'Meldung eingereicht. Admin prÃ¼ft demnÃ¤chst.');
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // ADMIN
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function renderAdminPanel(){
+  if(!currentUser || !currentUser.isAdmin){ showPage('home'); return; }
+
+  // â”€â”€ Stats
   document.getElementById('a-users').textContent = Object.keys(STATE.users).length;
   document.getElementById('a-posts').textContent = STATE.posts.length;
   document.getElementById('a-reports').textContent = STATE.reports.filter(r=>!r.reviewed).length;
   document.getElementById('a-banned').textContent = STATE.bannedUsers.length;
-  
-  const list = document.getElementById('adminReportsList');
-  if(!STATE.reports.length){
-    list.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--text-light);">${lang==='en'?'No reports yet':'Noch keine Meldungen'}</div>`;
-    return;
+
+  // â”€â”€ All Users
+  const usersList = document.getElementById('adminUsersList');
+  const allUsers = Object.values(STATE.users);
+  if(!allUsers.length){
+    usersList.innerHTML = `<div style="text-align:center;padding:1.5rem;color:var(--text-light);">No users yet</div>`;
+  } else {
+    usersList.innerHTML = allUsers.map(u => {
+      const isBanned = STATE.bannedUsers.includes(u.username);
+      const warnings = STATE.userWarnings[u.username] || 0;
+      const userPostCount = STATE.posts.filter(p=>p.postedBy===u.username).length;
+      return `<div class="admin-user-card" style="${isBanned?'opacity:.5;border-color:var(--danger);':''}">
+        <div class="auc-ava">
+          ${u.photo ? `<img src="${u.photo}">` : u.name[0].toUpperCase()}
+        </div>
+        <div class="auc-info">
+          <div class="auc-name">
+            ${u.name}
+            ${u.isAdmin ? '<span style="background:var(--danger);color:#fff;padding:1px 6px;border-radius:8px;font-size:.65rem;margin-left:4px;">ADMIN</span>' : ''}
+            ${isBanned ? '<span style="background:#888;color:#fff;padding:1px 6px;border-radius:8px;font-size:.65rem;margin-left:4px;">BANNED</span>' : ''}
+            ${warnings > 0 ? `<span style="background:var(--warn);color:#333;padding:1px 6px;border-radius:8px;font-size:.65rem;margin-left:4px;">âš ï¸ ${warnings} warn</span>` : ''}
+          </div>
+          <div class="auc-meta">@${u.username} Â· ${u.email||''} Â· ${userPostCount} posts Â· â­ ${u.rating}</div>
+        </div>
+        <div class="auc-actions">
+          ${!isBanned && !u.isAdmin ? `
+            <button class="btn-admin-action ba-warn" onclick="adminWarnUser('${u.username}')">âš ï¸</button>
+            <button class="btn-admin-action ba-ban" onclick="adminBanUser('${u.username}')">ðŸš«</button>
+          ` : isBanned ? `
+            <button class="btn-admin-action ba-dismiss" onclick="adminUnban('${u.username}')">âœ… Unban</button>
+          ` : ''}
+        </div>
+      </div>`;
+    }).join('');
   }
-  list.innerHTML = STATE.reports.map(r=>`
-    <div class="report-card ${r.reviewed?'done':''}">
-      <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
-        <strong>#${r.id} · ${r.reason}</strong>
-        <span style="font-size:0.78rem;color:var(--text-light);">${timeAgo(r.time)}</span>
-      </div>
-      <div style="font-size:0.85rem;color:var(--text-mid);">
-        <b>${lang==='en'?'Post':'Beitrag'}:</b> #${r.target.postId} <b>${lang==='en'?'User':'Nutzer'}:</b> @${r.target.username}<br>
-        <b>${lang==='en'?'Details':'Details'}:</b> ${r.details}<br>
-        <b>${lang==='en'?'By':'Von'}:</b> @${r.reportedBy}
-      </div>
-      ${!r.reviewed ? `<div class="report-card-actions">
-        <button class="btn-admin-action ba-warn" onclick="adminWarn('${r.target.username}',${r.id})">${lang==='en'?'Warn':'Warnen'}</button>
-        <button class="btn-admin-action ba-ban" onclick="adminBan('${r.target.username}',${r.id})">${lang==='en'?'Ban':'Sperren'}</button>
-        <button class="btn-admin-action ba-del" onclick="adminDelPost(${r.target.postId},${r.id})">${lang==='en'?'Del Post':'Löschen'}</button>
-        <button class="btn-admin-action ba-dismiss" onclick="adminDismiss(${r.id})">${lang==='en'?'Dismiss':'Ablehnen'}</button>
-      </div>` : `<div style="color:var(--success);font-size:0.82rem;margin-top:0.5rem;">✅ ${lang==='en'?'Reviewed':'Geprüft'}</div>`}
-    </div>`).join('');
+
+  // â”€â”€ Reports
+  const reportsList = document.getElementById('adminReportsList');
+  if(!STATE.reports.length){
+    reportsList.innerHTML = `<div style="text-align:center;padding:1.5rem;color:var(--text-light);">No reports yet â€” platform is clean âœ…</div>`;
+  } else {
+    reportsList.innerHTML = STATE.reports.map(r=>`
+      <div class="report-card ${r.reviewed?'done':''}">
+        <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+          <strong>#${r.id} Â· ${r.reason}</strong>
+          <span style="font-size:0.78rem;color:var(--text-light);">${timeAgo(r.time)}</span>
+        </div>
+        <div style="font-size:0.85rem;color:var(--text-mid);">
+          <b>Post:</b> #${r.target.postId} &nbsp;<b>Against:</b> @${r.target.username}<br>
+          <b>Details:</b> ${r.details}<br>
+          <b>Reported by:</b> @${r.reportedBy}
+        </div>
+        ${!r.reviewed ? `<div class="report-card-actions">
+          <button class="btn-admin-action ba-warn" onclick="adminWarn('${r.target.username}',${r.id})">âš ï¸ Warn</button>
+          <button class="btn-admin-action ba-ban" onclick="adminBan('${r.target.username}',${r.id})">ðŸš« Ban</button>
+          <button class="btn-admin-action ba-del" onclick="adminDelPost(${r.target.postId},${r.id})">ðŸ—‘ Del Post</button>
+          <button class="btn-admin-action ba-dismiss" onclick="adminDismiss(${r.id})">âœ“ Dismiss</button>
+        </div>` : `<div style="color:var(--success);font-size:0.82rem;margin-top:0.5rem;">âœ… Reviewed</div>`}
+      </div>`).join('');
+  }
+
+  // â”€â”€ All Posts
+  const postsList = document.getElementById('adminPostsList');
+  if(!STATE.posts.length){
+    postsList.innerHTML = `<div style="text-align:center;padding:1.5rem;color:var(--text-light);">No posts yet</div>`;
+  } else {
+    postsList.innerHTML = STATE.posts.map(p=>`
+      <div class="admin-post-card">
+        <div class="apc-title">${p.title}</div>
+        <div class="apc-meta">
+          ðŸ“ ${p.ortsteil} Â· â‚¬${p.warm}/mo Â· ${p.type} Â· ðŸ‘ ${formatViews(p.displayViews)} views
+          Â· by @${p.postedBy} Â· ${timeAgo(p.createdAt)}
+        </div>
+        <div class="apc-actions">
+          <button class="btn-admin-action ba-warn" onclick="adminEditPost(${p.id})">âœï¸ Edit</button>
+          <button class="btn-admin-action ba-del" onclick="adminDeletePost(${p.id})">ðŸ—‘ï¸ Delete</button>
+        </div>
+      </div>`).join('');
+  }
 }
 
-function adminWarn(u,rid){ if(!confirm(`Warn @${u}?`)) return; STATE.userWarnings[u]=(STATE.userWarnings[u]||0)+1; toast(`⚠️ Warning sent to @${u}`); reviewReport(rid); }
-function adminBan(u,rid){ if(!confirm(`Ban @${u}?`)) return; STATE.bannedUsers.push(u); toast(`🚫 @${u} banned`); reviewReport(rid); }
-function adminDelPost(pid,rid){ if(!confirm(`Delete post #${pid}?`)) return; STATE.posts=STATE.posts.filter(p=>p.id!=pid); renderPosts(getAlgoSorted()); toast(`🗑️ Post deleted`); reviewReport(rid); }
+function adminWarnUser(u){ if(!confirm(`Send warning to @${u}?`)) return; STATE.userWarnings[u]=(STATE.userWarnings[u]||0)+1; toast(`âš ï¸ Warning sent to @${u}`); renderAdminPanel(); }
+function adminBanUser(u){ if(!confirm(`Ban @${u} permanently?`)) return; if(!STATE.bannedUsers.includes(u)) STATE.bannedUsers.push(u); toast(`ðŸš« @${u} has been banned`); renderAdminPanel(); }
+function adminUnban(u){ if(!confirm(`Unban @${u}?`)) return; STATE.bannedUsers=STATE.bannedUsers.filter(b=>b!==u); toast(`âœ… @${u} unbanned`); renderAdminPanel(); }
+
+function adminWarn(u,rid){ if(!confirm(`Warn @${u}?`)) return; STATE.userWarnings[u]=(STATE.userWarnings[u]||0)+1; toast(`âš ï¸ Warning sent to @${u}`); reviewReport(rid); }
+function adminBan(u,rid){ if(!confirm(`Ban @${u}?`)) return; STATE.bannedUsers.push(u); toast(`ðŸš« @${u} banned`); reviewReport(rid); }
+function adminDelPost(pid,rid){ if(!confirm(`Delete post #${pid}?`)) return; STATE.posts=STATE.posts.filter(p=>p.id!=pid); renderPosts(getAlgoSorted()); toast(`ðŸ—‘ï¸ Post deleted`); reviewReport(rid); }
 function adminDismiss(rid){ reviewReport(rid); toast(lang==='en'?'Report dismissed':'Meldung abgelehnt'); }
 function reviewReport(rid){ const r=STATE.reports.find(x=>x.id===rid); if(r) r.reviewed=true; renderAdminPanel(); updateAdminDot(); }
 function adminEditPost(id){ openEditPost(id); }
@@ -2573,9 +2717,9 @@ function updateAdminDot(){
   else { dot.classList.add('hidden'); }
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // IMAGE UPLOADS FOR POST
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function handlePostImgs(input){
   [...input.files].slice(0, 11-postImages.length).forEach(f=>{
     const r=new FileReader();
@@ -2585,13 +2729,13 @@ function handlePostImgs(input){
 }
 function renderPostImgPreviews(){
   document.getElementById('pImgPreviews').innerHTML = postImages.map((img,i)=>`
-    <div class="img-prev"><img src="${img}"><div class="img-prev-del" onclick="removePostImg(${i})">×</div></div>`).join('');
+    <div class="img-prev"><img src="${img}"><div class="img-prev-del" onclick="removePostImg(${i})">Ã—</div></div>`).join('');
 }
 function removePostImg(i){ postImages.splice(i,1); renderPostImgPreviews(); }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // NAVIGATION
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function showPage(page){
   // Deactivate all page divs and bnav buttons
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
@@ -2608,7 +2752,7 @@ function showPage(page){
   if(page==='profile') renderProfile();
   if(page==='messages') renderConversations();
   if(page==='admin'){
-    if(!currentUser||!currentUser.isAdmin){ toast(lang==='en'?'Admin access only':'Nur für Admins'); return; }
+    if(!currentUser||!currentUser.isAdmin){ toast(lang==='en'?'Admin access only':'Nur fÃ¼r Admins'); return; }
     renderAdminPanel();
   }
   window.scrollTo(0,0);
@@ -2616,29 +2760,22 @@ function showPage(page){
 
 function updateNav(){
   const signinBtn = document.getElementById('signinBtn');
-  const avatarWrap = document.getElementById('avatarWrap');
-  const topnavAvatar = document.getElementById('topnavAvatar');
   const langBtn = document.getElementById('langToggleBtn');
 
-  if(langBtn) langBtn.textContent = lang==='en' ? '🇬🇧 EN' : '🇩🇪 DE';
+  if(langBtn) langBtn.textContent = lang==='en' ? 'ðŸ‡¬ðŸ‡§ EN' : 'ðŸ‡©ðŸ‡ª DE';
 
   if(currentUser){
     signinBtn.classList.add('hidden');
-    avatarWrap.classList.remove('hidden');
-    const u = STATE.users[currentUser.username];
-    if(u?.photo){ topnavAvatar.innerHTML=`<img src="${u.photo}" style="width:100%;height:100%;object-fit:cover;">`; }
-    else { topnavAvatar.textContent=currentUser.name[0].toUpperCase(); }
     if(currentUser.isAdmin) updateAdminDot();
   } else {
     signinBtn.classList.remove('hidden');
     signinBtn.textContent = t('sign_in');
-    avatarWrap.classList.add('hidden');
   }
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // MODALS
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function openModal(id){ document.getElementById(id).classList.add('open'); }
 function closeModal(id){ document.getElementById(id).classList.remove('open'); }
 function switchModal(from,to){ closeModal(from); openModal(to); }
@@ -2650,9 +2787,9 @@ document.addEventListener('keydown', e=>{
   if(e.key==='Escape') document.querySelectorAll('.modal.open').forEach(m=>m.classList.remove('open'));
 });
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // TOAST
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 let toastTimer;
 function toast(msg){
   const el=document.getElementById('toast');
@@ -2662,24 +2799,45 @@ function toast(msg){
   toastTimer=setTimeout(()=>el.classList.remove('show'),3000);
 }
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // AUTO REFRESH
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 setInterval(()=>{
   if(currentPage==='home') renderPosts(getAlgoSorted());
 },60000); // refresh every minute
 
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // INIT
-// ═══════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function init(){
   lang = localStorage.getItem('bnLang') || 'en';
   const btn = document.getElementById('langToggleBtn');
-  if(btn) btn.textContent = lang === 'en' ? '🇬🇧 EN' : '🇩🇪 DE';
+  if(btn) btn.textContent = lang === 'en' ? 'ðŸ‡¬ðŸ‡§ EN' : 'ðŸ‡©ðŸ‡ª DE';
+
   initData();
+
+  // â”€â”€ Restore login session after refresh
+  const saved = localStorage.getItem('bnCurrentUser');
+  if(saved){
+    try {
+      const parsed = JSON.parse(saved);
+      // Re-link to live STATE.users so profile edits reflect correctly
+      if(!STATE.users[parsed.username]){
+        STATE.users[parsed.username] = parsed;
+      }
+      STATE.users[parsed.username].isAdmin = parsed.isAdmin;
+      currentUser = {...STATE.users[parsed.username], isAdmin: parsed.isAdmin};
+    } catch(e){ localStorage.removeItem('bnCurrentUser'); }
+  }
+
   renderPosts(getAlgoSorted());
   updateNav();
   applyLang();
+}
+
+// Also save updated user data when profile is edited
+function saveSession(){
+  if(currentUser) localStorage.setItem('bnCurrentUser', JSON.stringify(currentUser));
 }
 
 init();
